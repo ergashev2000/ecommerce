@@ -9646,7 +9646,7 @@ a.text-dark:hover, a.text-dark:focus {
   justify-content: space-between;
   align-items: center;
   flex-wrap: nowrap;
-  
+
   gap: 5px;
 }
 .logo > img{
@@ -9664,4 +9664,15 @@ a.text-dark:hover, a.text-dark:focus {
 
 .space-behind {
   height: 100px;
+}
+.product__checkout{
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  border-bottom: 1px solid grey;
+  padding: 10px 0 5px 0;
+  width: 100%;
+}
+.product__checkout > p{
+  margin: 0;
 }

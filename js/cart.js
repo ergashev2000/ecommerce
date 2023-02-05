@@ -97,7 +97,7 @@ function cartCounter() {
   let counterCart = document.querySelector(".cart__count");
   let localDataLeng = JSON.parse(localStorage.getItem("cart"));
   if (localDataLeng !== null) {
-    console.log(localDataLeng);
+    // console.log(localDataLeng);
     counterCart.textContent = localDataLeng.length;
   }
 }
@@ -106,7 +106,6 @@ cartCounter();
 function checkoutDisabled() {
   let totalPrice = cart;
   let checkoutBtn = document.querySelector(".checkout__btn");
-  console.log(totalPrice.length);
   if (!totalPrice.length) {
     checkoutBtn.setAttribute("href", "javascript:void(0)");
     checkoutBtn.setAttribute("aria-disabled", "true");
@@ -116,3 +115,6 @@ function checkoutDisabled() {
   }
 }
 checkoutDisabled();
+
+
+
