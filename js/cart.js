@@ -8,9 +8,8 @@ function renderCart() {
   cart.forEach((item) => {
     let tr = document.createElement("tr");
     tr.innerHTML = `
-      <td class="align-middle"><img src="${
-        item.img
-      }" alt="" style="width: 50px;"> ${item.name}</td>
+      <td class="align-middle">
+      <img src="${item.img}" alt="Products" style="width: 50px; width="50" height="50"> ${item.name}</td>
       <td class="align-middle">$${item.price}</td>
       <td class="align-middle">
         <div class="input-group quantity mx-auto" style="width: 100px;">
@@ -28,8 +27,11 @@ function renderCart() {
         </div>
       </td>
       <td class="align-middle">$${item.price * item.quantity}</td>
-      <td class="align-middle"><button class="btn btn-sm btn-primary btn-remove"><i
-                  class="fa fa-times"></i></button></td>
+      <td class="align-middle">
+        <button class="btn btn-sm btn-primary btn-remove">
+          <i class="fa fa-times"></i>
+        </button>
+      </td>
     `;
     tableBody.appendChild(tr);
 
@@ -67,7 +69,7 @@ function removeFromCart(item) {
   localStorage.setItem("cart", JSON.stringify(cart));
   renderCart();
   allProducts();
-  checkoutDisabled()
+  checkoutDisabled();
 }
 
 renderCart();
@@ -89,7 +91,6 @@ function allProducts() {
   shipping.textContent = "$" + shippingValue;
   total.textContent =
     "$" + (subtotalValue === 0 ? 0 : subtotalValue + shippingValue);
-    
 }
 allProducts();
 function cartCounter() {
@@ -101,7 +102,6 @@ function cartCounter() {
   }
 }
 cartCounter();
-
 
 function checkoutDisabled() {
   let totalPrice = cart;
@@ -115,4 +115,4 @@ function checkoutDisabled() {
     checkoutBtn.setAttribute("aria-disabled", "false");
   }
 }
-checkoutDisabled()
+checkoutDisabled();

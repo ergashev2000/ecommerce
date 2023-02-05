@@ -9645,6 +9645,8 @@ a.text-dark:hover, a.text-dark:focus {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: nowrap;
+  
   gap: 5px;
 }
 .logo > img{
