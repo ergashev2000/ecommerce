@@ -159,3 +159,12 @@ window.addEventListener('scroll', function () {
     headerBox.classList.remove('space-behind');
   }
 });
+
+
+
+const searchParams = new URLSearchParams(window.location.search);
+const searchText = searchParams.get("search");
+
+if (searchText) {
+  searchProducts(searchText)
+}
